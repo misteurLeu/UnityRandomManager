@@ -64,11 +64,6 @@ public partial class RandomManager: MonoBehaviour
 
     public static bool isKeyAvaible(string key)
     {
-        Debug.Log(key);
-        Debug.Log(string.IsNullOrEmpty(key));
-        Debug.Log(Instance.items.ContainsKey(key));
-        Debug.Log(string.IsNullOrWhiteSpace(key));
-
         return !string.IsNullOrEmpty(key) && !string.IsNullOrWhiteSpace(key) && !Instance.items.ContainsKey(key);
     }
 
