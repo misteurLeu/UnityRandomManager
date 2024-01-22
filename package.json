@@ -1,0 +1,30 @@
+{
+  "name": "com.clumsywolf.randommanager",
+  "version": "0.1.0",
+  "displayName": "Random Manager",
+  "description": "Manager to handle complex random structures.",
+  "unity": "2019.1",
+  "documentationUrl": "https://github.com/misteurLeu/UnityRandomManager/blob/main/README.md",
+  "changelogUrl": "https://github.com/misteurLeu/UnityRandomManager/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/misteurLeu/UnityRandomManager/blob/main/LICENCE",
+  "author": {
+    "name": "MisterLeu",
+    "email": "leu.jeremy@example.com",
+    "url": "https://github.com/misteurLeu"
+  },
+  "Samples": [
+    {
+      "displayName": "Example",
+      "description": "usage example",
+      "path": "Samples/Example"
+    },
+    {
+      "displayName": "Manager prefab",
+      "description": "A prefab ready to used",
+      "path": "Samples/Prefab"
+    }
+  ],
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.6"
+  }
+}
