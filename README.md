@@ -9,34 +9,47 @@ the main RandomItem is always accessible under the key "main"
 
 A level of abstraction over the random class to make it easier to use.
 
->> RandomItem() -> constructor
-> generate a seed based of the current unix timestamp DateTimeOffset.Now.ToUnixTimeSeconds() 
-> Initialise a new random based on the seed
+> RandomItem() -> constructor
+>
+>> generate a seed based of the current unix timestamp DateTimeOffset.Now.ToUnixTimeSeconds() 
+>
+>> Initialise a new random based on the seed
 
- >> RandomItem(int seed) -> constructor
- > set the seed with the one passed on parameter
- > generate a new random item based on the seed
+ > RandomItem(int seed) -> constructor
+ >
+ >> set the seed with the one passed on parameter
+ >
+ >> generate a new random item based on the seed
  
- >> int value -> accessor
- > Get: return the last value generated, if the value is null generate a value and return it
- > set: private
+ > int value -> accessor
+ >
+ >> Get: return the last value generated, if the value is null generate a value and return it
+ >
+ >> set: private
 
- >> int Seed -> accessor
- > Get: return the seed value
- > set: private
+ > int Seed -> accessor
+ >
+ >> Get: return the seed value
+ >
+ >> set: private
  
- >> int callNumber -> accessor
- > get: return the number of times a number has been drawn
- > set: private
+ > int callNumber -> accessor
+ >
+ >> get: return the number of times a number has been drawn
+ >
+ >> set: private
  
- >> Random Random -> accessor
- > return the Random item
+ > Random Random -> accessor
+ >
+ >> return the Random item
  
- >> Next()
- > draw the next integer and return it
+ > Next()
+ >
+ >> draw the next integer and return it
  
- >> Export()
- > return a string as follow: seed;callNumber
+ > Export()
+ >
+ >> return a string as follow: seed;callNumber
 
 ## RandomManager.cs:
 
@@ -76,4 +89,5 @@ Utilities function to import and export the RandomManager
 >> Parse the string list passed as a parameter uder the format (key=seed) to fill the class dict, if the parameter clear is set to false, add the items to the dict
 
 > GetValue(string key)
+>
 >> return the last value drawn from a specific key, if there is no value drawn, RandomItem.Value will draw one before returning it.

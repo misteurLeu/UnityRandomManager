@@ -5,8 +5,6 @@ using System;
 
 public class RandomItem: System.Random
 {
-    private int _seed;
-    private int _callNumber;
     private int? _value = null;
 
     public int Value
@@ -18,19 +16,12 @@ public class RandomItem: System.Random
         }
     }
 
-    public int Seed
-    {
-        get => _seed;
-    }
-
-    public int CallNumber
-    {
-        get => _callNumber;
-    }
+    public int Seed { get; private set; }
+    public int CallNumber { get; private set;}
 
     public override int Next()
     {
-        _callNumber += 1;
+        CallNumber += 1;
         _value = base.Next();
         return Value;
     }
@@ -38,20 +29,20 @@ public class RandomItem: System.Random
     public RandomItem(int seed): base(seed)
     {
         // Init the class randomItem with a given seed
-        _seed = seed;
-        _callNumber = 0;
+        Seed = seed;
+        CallNumber = 0;
     }
     
     public RandomItem(int seed, int numberOfCalls): base(seed)
     {
         // Init the class randomItem with a given seed and set the random to a given position, usefull for save/load.
-        _seed = seed;
+        Seed = seed;
         for(int i = 0; i < numberOfCalls; i++)
             Next();
     }
 
     public string Export()
     {
-        return $"{_seed};{_callNumber}";
+        return $"{Seed};{CallNumber}";
     }
 }

@@ -13,3 +13,8 @@
 - add a getValue() method in RandomManager
 - add a Value readonly property in RandomItem
 - add an Export() method in RandomItem
+
+## 0.3.1 - 25-03-2024
+
+- add forgoten changes from RandomItem
+- improve readme
