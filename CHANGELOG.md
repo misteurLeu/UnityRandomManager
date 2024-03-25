@@ -24,3 +24,9 @@
 ### fix
 
 - fix missing prefab from samples
+
+## 0.3.3 - 25-03-2024
+
+### fix
+
+- fix missing metas files

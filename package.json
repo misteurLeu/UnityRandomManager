@@ -1,6 +1,6 @@
 {
   "name": "com.clumsywolf.randommanager",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "displayName": "Random Manager",
   "description": "Manager to handle complex random structures.",
   "unity": "2019.1",
