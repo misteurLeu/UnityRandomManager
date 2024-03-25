@@ -1,6 +1,6 @@
 {
   "name": "com.clumsywolf.randommanager",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "displayName": "Random Manager",
   "description": "Manager to handle complex random structures.",
   "unity": "2019.1",
@@ -9,7 +9,7 @@
   "licensesUrl": "https://github.com/misteurLeu/UnityRandomManager/blob/main/LICENCE",
   "author": {
     "name": "MisterLeu",
-    "email": "leu.jeremy@example.com",
+    "email": "leu.jeremy@gmail.com",
     "url": "https://github.com/misteurLeu"
   },
   "samples": [

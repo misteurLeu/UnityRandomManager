@@ -8,14 +8,14 @@ public class ElementManager : MonoBehaviour
     public TextMeshProUGUI seed;
     public TextMeshProUGUI drawed;
 
-    public void reset(string newSeed)
+    public void Set(string newSeed)
     {
         seed.text = newSeed;
-        this.Draw();
+        drawed.text = RandomManager.Instance.getValue(seed.text).ToString();
     }
 
     public void Draw()
     {
-         drawed.text = RandomManager.NextKey(seed.text).ToString();
+         drawed.text = RandomManager.Instance.NextKey(seed.text).ToString();
     }
 }

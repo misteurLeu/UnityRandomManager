@@ -7,6 +7,16 @@ public class RandomItem: System.Random
 {
     private int _seed;
     private int _callNumber;
+    private int? _value = null;
+
+    public int Value
+    {
+        get {
+            if (_value == null)
+                Next();
+            return (int)_value;
+        }
+    }
 
     public int Seed
     {
@@ -21,7 +31,8 @@ public class RandomItem: System.Random
     public override int Next()
     {
         _callNumber += 1;
-        return base.Next();
+        _value = base.Next();
+        return Value;
     }
 
     public RandomItem(int seed): base(seed)
@@ -35,8 +46,12 @@ public class RandomItem: System.Random
     {
         // Init the class randomItem with a given seed and set the random to a given position, usefull for save/load.
         _seed = seed;
-        _callNumber = numberOfCalls;
         for(int i = 0; i < numberOfCalls; i++)
-            this.Next();
+            Next();
+    }
+
+    public string Export()
+    {
+        return $"{_seed};{_callNumber}";
     }
 }
