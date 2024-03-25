@@ -18,3 +18,9 @@
 
 - add forgoten changes from RandomItem
 - improve readme
+
+## 0.3.2 - 25-03-2024
+
+### fix
+
+- fix missing prefab from samples
