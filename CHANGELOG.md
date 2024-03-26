@@ -30,3 +30,9 @@
 ### fix
 
 - fix missing metas files
+
+## 0.3.4 - 26-03-2024
+
+### fix
+
+- fix broken example scene
