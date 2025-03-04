@@ -18,7 +18,12 @@ public class RandomManager: MonoBehaviour
 
     private static RandomManager _instance;
 
-    public static RandomManager Instance { get => _instance;}
+    public static RandomManager Instance { get => _instance; }
+
+    public int MainSeed
+    {
+        get { return _items[_mainKey].Seed;}
+    }
 
     private Dictionary<string, RandomItem> _items;
 

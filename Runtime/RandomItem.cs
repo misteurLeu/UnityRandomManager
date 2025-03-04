@@ -26,6 +26,57 @@ public class RandomItem: System.Random
         return Value;
     }
 
+    /*
+     return a random number between 0 and max
+     max is exclusive
+     */
+    public int Range(int max)
+    {
+        if (max <= 0)
+            throw new ArgumentOutOfRangeException($"max should be strictly superior to 0, {max} given");
+        return Range(0, max);
+    }
+
+    /*
+     return a random number between min and max
+     min is inclusive
+     max is exclusive
+     */
+    public int Range(int min, int max)
+    {
+        if (max <= 0)
+            throw new ArgumentOutOfRangeException($"max should be strictly superior to min, max = {max}, min = {min}");
+        return Next() % (max - min) + min;
+    }
+
+    // return a random float between 0 and 1
+    public float FRand()
+    {
+        return Next() / (float)int.MaxValue;
+    }
+    /*
+     return a random number between 0 and max
+     */
+    public float Range(float max)
+    {
+        if (max <= 0)
+            throw new ArgumentOutOfRangeException($"max should be strictly superior to 0, {max} given");
+
+        return FRand() * max;
+    }
+
+    /*
+     return a random number between min and max
+     min is inclusive
+     max is exclusive
+     */
+    public float Range(float min, float max)
+    {
+        if (max <= 0)
+            throw new ArgumentOutOfRangeException($"max should be strictly superior to min, max = {max}, min = {min}");
+        return FRand() * (max - min) + min;
+    }
+
     public RandomItem(int seed): base(seed)
     {
         // Init the class randomItem with a given seed

@@ -36,3 +36,10 @@
 ### fix
 
 - fix broken example scene
+
+## 0.3.5 - 04-05-2025
+
+### feat
+
+New Main seed accessor
+Range methods in RandomItem
